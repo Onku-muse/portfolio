@@ -318,21 +318,16 @@ body {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   /* Header */
-  .social-links, .email-icon {
-    position: fixed; /* Keep icons at the top */
-    top: 10px; /* Position icons at the top */
-    font-size: 1px; /* Further reduce size */
-    margin: 0 1px; /* Adjust margins to fit */
+  @media (max-width: 768px) {
+    .social-links .link-text, 
+    .email-icon .link-text {
+      display: none; /* Hide text */
+    }
+    
+    .social-links, .email-icon {
+      font-size: 16px; /* Adjust size for mobile view */
+    }
   }
-
-  .social-links {
-    right: 10px; /* Align social links to the right */
-  }
-
-  .email-icon {
-    left: 10px; /* Align email icon to the left */
-  }
-
   /* Floating banner */
   .floating-banner {
     height: 60px; /* Adjusted height for mobile */
