@@ -104,48 +104,59 @@ body {
   justify-content: center;
   gap: 20px;
   margin: 20px auto;
-  max-width: 80%;
+  max-width: 90%;
   padding: 0 20px;
 }
 
+/* Box Styles */
 .box {
   background-color: #222;
-  padding: 150px; /* Adjusted padding */
+  height: 300px; /* Set fixed height */
+  padding: 20px; /* Reduce padding but maintain height */
   border: 1px solid #555;
   width: 23%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Space items evenly */
   box-shadow: none;
   border-radius: 0;
   position: relative;
 }
+.box:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Icon */
 .box i {
   position: absolute; 
-  top: 150px; /* Adjusted position */
+  bottom: 100px; /* Adjust position */
   left: 10px;
   font-size: 24px;
   color: #fff;
 }
 
+/* Box Heading */
 .box-heading {
   position: absolute;
   font-size: 18px;
   font-weight: bold;
   bottom: 60px; /* Adjusted position */
-  left: 10px;
+  left: 5px;
   color: #fff;
   text-align: left;
 }
 
+/* Box Body */
 .box-body {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 5px; /* Keep it at the bottom-left corner */
+  left: 5px;
   font-size: 14px;
   color: #ccc;
   text-align: left;
 }
+
 
 /* Project Section Styles */
 #projects {
@@ -337,33 +348,6 @@ body {
   }
 
   /* Apply same width constraints to other sections */
-  .box-container {
-    max-width: 70%; /* Full width on mobile */
-    padding: 0 10px; /* Reduced padding on mobile */
-    gap: 5px; /* Smaller gap for mobile */
-  }
-
-  .box {
-    padding: 80px 55px; /* Reduced padding for mobile */
-    width: 40%; /* Make each box smaller but maintain horizontal layout */
-  }
-
-  .box i {
-    top: 60px; /* Adjust icon position */
-    font-size: 15px; /* Smaller icon size for mobile */
-  }
-
-  .box-heading {
-    font-size: 12px; /* Adjust heading font size */
-    bottom: 35px; /* Adjust heading position */
-    left: 2px;
-  }
-
-  .box-body {
-    font-size: 8px; /* Adjust body text size */
-    top: 105px;
-    left: 2px;
-  }
 
   .quote-box {
     width: 90%; /* Reduce width to better fit smaller screens */
@@ -404,3 +388,92 @@ body {
     margin: 0 auto; /* Center text block */
     width: 90%; /* Adjust width to fit within margins */
   }
+/* Small Mobile View: Screens up to 480px */
+@media (max-width: 480px) {
+  .box-container {
+    max-width: 100%;
+    gap: 5px;
+    padding: 0 5px;
+    justify-content: center;
+  }
+
+  .box {
+    height: 150px;
+    width: 100%; /* Full width for small mobile */
+    padding: 8px;
+  }
+
+  .box i {
+    bottom: 50px;
+    font-size: 14px;
+  }
+
+  .box-heading {
+    font-size: 12px;
+    bottom: 25px;
+  }
+
+  .box-body {
+    font-size: 10px;
+  }
+}
+
+/* Medium Mobile View: 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .box-container {
+    max-width: 100%;
+    gap: 10px;
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  .box {
+    height: 180px;
+    width: 45%; /* Two boxes side by side */
+    padding: 10px;
+  }
+
+  .box i {
+    bottom: 87px;
+    font-size: 15px;
+  }
+
+  .box-heading {
+    font-size: 10px;
+    bottom: 50px;
+  }
+
+  .box-body {
+    font-size: 8px;
+  }
+}
+
+/* Large Mobile View: 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .box-container {
+    max-width: 100%;
+    gap: 15px;
+    padding: 0 15px;
+    justify-content: center;
+  }
+
+  .box {
+    height: 200px;
+    width: 40%; /* Two boxes side by side */
+    padding: 12px;
+  }
+
+  .box i {
+    bottom: 70px;
+    font-size: 20px;
+  }
+
+  .box-heading {
+    font-size: 16px;
+    bottom: 40px;
+  }
+
+  .box-body {
+    font-size: 14px;
+  }
+}
