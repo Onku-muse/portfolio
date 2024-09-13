@@ -428,22 +428,24 @@ body {
   }
 
   .box {
-    height: 180px;
+    height: 70px;
     width: 45%; /* Two boxes side by side */
     padding: 10px;
   }
 
   .box i {
-    bottom: 87px;
+    top: 10px;
     font-size: 15px;
+    right: 1px;
   }
 
   .box-heading {
-    font-size: 10px;
-    bottom: 50px;
+    font-size: 12px;
+    top: 20px;
   }
 
   .box-body {
+    display: none;
     font-size: 8px;
   }
 }
