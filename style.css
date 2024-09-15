@@ -429,7 +429,7 @@ body {
   }
 
   .box {
-    height: 50px;
+    height: 70px;
     width: 45%; /* Full width for small mobile */
     padding: 8px;
   }
@@ -448,8 +448,15 @@ body {
     font-size: 10px;
     display: none;
   }
+  .quote-box {
+    width: 90%; /* Reduce width to better fit smaller screens */
+    padding: 15px; /* Reduce padding */
+    text-align: justify; /* Change justification to left-align for mobile */
+    word-spacing: normal; /* Ensure word spacing is regular */
+    line-height: 1.5;
+    font-size: 10px;
 }
-
+}
 /* Large Mobile View: 769px to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
   .social-links .link-text, 
