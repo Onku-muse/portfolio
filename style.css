@@ -328,7 +328,7 @@ body {
 
 /* Mobile view adjustments */
   /* Header */
-  @media (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     .social-links .link-text, 
     .email-icon .link-text {
       display: none; /* Hide text */
@@ -441,7 +441,6 @@ body {
   }
 
   .box-body {
-    display: inline;
     font-size: 10px;
   }
 }
@@ -473,5 +472,6 @@ body {
 
   .box-body {
     font-size: 14px;
+    display: inline;
   }
 }
