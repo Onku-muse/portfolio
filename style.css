@@ -417,6 +417,10 @@ body {
   }
 /* Small Mobile View: Screens up to 480px */
 @media (max-width: 480px) {
+  .social-links .link-text, 
+  .email-icon .link-text {
+    display: none; /* Hide text */
+  }
   .box-container {
     max-width: 100%;
     gap: 5px;
@@ -425,8 +429,8 @@ body {
   }
 
   .box {
-    height: 150px;
-    width: 100%; /* Full width for small mobile */
+    height: 50px;
+    width: 45%; /* Full width for small mobile */
     padding: 8px;
   }
 
@@ -437,16 +441,21 @@ body {
 
   .box-heading {
     font-size: 12px;
-    bottom: 25px;
+    bottom: 10px;
   }
 
   .box-body {
     font-size: 10px;
+    display: none;
   }
 }
 
 /* Large Mobile View: 769px to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .social-links .link-text, 
+  .email-icon .link-text {
+    display: none; /* Hide text */
+  }
   .box-container {
     max-width: 100%;
     gap: 15px;
