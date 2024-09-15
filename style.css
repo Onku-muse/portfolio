@@ -353,7 +353,7 @@ body {
     width: 90%; /* Reduce width to better fit smaller screens */
     padding: 15px; /* Reduce padding */
     text-align: left; /* Change justification to left-align for mobile */
-    word-spacing: normal; /* Ensure word spacing is regular */
+    word-spacing: 0.5; /* Ensure word spacing is regular */
     line-height: 1.5; /* Slightly reduced line height for better fit */
   }
   .project p {
@@ -381,7 +381,34 @@ body {
     padding: 10px;
     margin: 0;
   }
-  
+  .box-container {
+    max-width: 100%;
+    gap: 10px;
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  .box {
+    height: 70px;
+    width: 45%; /* Two boxes side by side */
+    padding: 10px;
+  }
+
+  .box i {
+    top: 10px;
+    font-size: 15px;
+    left: 10px;
+  }
+
+  .box-heading {
+    font-size: 12px;
+    top: 20px;
+  }
+
+  .box-body {
+    display: none;
+    font-size: 8px;
+  }
   /* Center "Hi, I'm Onku_Muse" text */
   .hello-text {
     text-align: center; /* Center the text */
@@ -414,39 +441,8 @@ body {
   }
 
   .box-body {
+    display: inline;
     font-size: 10px;
-  }
-}
-
-/* Medium Mobile View: 481px to 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-  .box-container {
-    max-width: 100%;
-    gap: 10px;
-    padding: 0 10px;
-    justify-content: center;
-  }
-
-  .box {
-    height: 70px;
-    width: 45%; /* Two boxes side by side */
-    padding: 10px;
-  }
-
-  .box i {
-    top: 10px;
-    font-size: 15px;
-    right: 1px;
-  }
-
-  .box-heading {
-    font-size: 12px;
-    top: 20px;
-  }
-
-  .box-body {
-    display: none;
-    font-size: 8px;
   }
 }
 
