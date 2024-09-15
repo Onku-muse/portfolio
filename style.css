@@ -355,6 +355,7 @@ body {
     text-align: left; /* Change justification to left-align for mobile */
     word-spacing: 0.5; /* Ensure word spacing is regular */
     line-height: 1.5; /* Slightly reduced line height for better fit */
+    font-size: 12px;
   }
   .project p {
     font-size: 14px; /* Slightly smaller font for mobile */
@@ -389,7 +390,7 @@ body {
   }
 
   .box {
-    height: 70px;
+    height:70px;
     width: 45%; /* Two boxes side by side */
     padding: 10px;
   }
@@ -402,7 +403,7 @@ body {
 
   .box-heading {
     font-size: 12px;
-    top: 20px;
+    bottom: 10px;
   }
 
   .box-body {
@@ -429,7 +430,7 @@ body {
   }
 
   .box {
-    height: 70px;
+    height: 80px;
     width: 45%; /* Full width for small mobile */
     padding: 8px;
   }
