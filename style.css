@@ -325,170 +325,62 @@ body {
 .email-icon a:hover {
   color: #ccc;
 }
-
-/* Mobile view adjustments */
-  /* Header */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .social-links .link-text, 
-    .email-icon .link-text {
-      display: none; /* Hide text */
-    }
-    
-    .social-links, .email-icon {
-      font-size: 16px; /* Adjust size for mobile view */
-    }
-  }
-  /* Floating banner */
-  .floating-banner {
-    height: 60px; /* Adjusted height for mobile */
-  }
-
-  .floating-banner img {
-    margin: 0 20px; /* Adjusted space between images */
-  }
-
-  /* Apply same width constraints to other sections */
-
-  .quote-box {
-    width: 90%; /* Reduce width to better fit smaller screens */
-    padding: 15px; /* Reduce padding */
-    text-align: left; /* Change justification to left-align for mobile */
-    word-spacing: 0.5; /* Ensure word spacing is regular */
-    line-height: 1.5; /* Slightly reduced line height for better fit */
-    font-size: 12px;
-  }
-  .project p {
-    font-size: 14px; /* Slightly smaller font for mobile */
-    text-align: justify; /* Maintain justified alignment */
-    word-spacing: normal;
-    line-height: 1.5; /* Adjust line height for mobile */
-  }
-  /* Font size adjustments */
-  h2, h3, p {
-    font-size: 1rem;
-    padding: 10px;
-    text-align: justify;
-    word-spacing: 0.5px;
-  }
-
-  /* Images */
-  .project img {
+@media only screen and (max-width: 768px) {
+  /* For the entire webpage, set it to cover 70%-80% of the screen width and center it */
+  body {
     width: 100%;
-    height: auto;
+    margin: 0 auto; /* Center the body */
   }
 
-  /* Padding and margins */
-  .project-description, .section-title {
-    padding: 10px;
-    margin: 0;
+  /* Social and Email Icons: only the icons, no text */
+  .social-links .link-text, .email-icon .link-text {
+    display: none; /* Hide the text */
   }
+
+  .social-links a, .email-icon a {
+    font-size: 18px; /* Reduce the icon size for mobile */
+  }
+
+  /* Box section adjustments for mobile */
   .box-container {
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Keep boxes side by side while wrapping if needed */
     gap: 10px;
-    padding: 0 10px;
-    justify-content: center;
+    justify-content: space-between; /* Ensure space between boxes */
+    width: 100%; /* Ensure the boxes fit within the screen width */
   }
 
   .box {
-    height:70px;
-    width: 45%; /* Two boxes side by side */
-    padding: 10px;
+    width: 48%; /* Two boxes side by side, reduced size to fit the screen */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Reduce padding to fit mobile */
   }
 
+  /* Icon inside the box - reduced size */
   .box i {
-    top: 10px;
-    font-size: 15px;
-    left: 10px;
+    font-size: 18px; /* Reduce the icon size */
+    bottom: 80px; /* Adjust position based on reduced size */
   }
 
+  /* Box Heading - reduced size */
   .box-heading {
-    font-size: 12px;
-    bottom: 10px;
+    font-size: 16px; /* Reduce font size for heading */
+    bottom: 50px; /* Adjust position */
   }
 
+  /* Box Body Text - reduced size */
   .box-body {
-    display: none;
-    font-size: 8px;
-  }
-  /* Center "Hi, I'm Onku_Muse" text */
-  .hello-text {
-    text-align: center; /* Center the text */
-    margin: 0 auto; /* Center text block */
-    width: 90%; /* Adjust width to fit within margins */
-  }
-/* Small Mobile View: Screens up to 480px */
-@media (max-width: 480px) {
-  .social-links .link-text, 
-  .email-icon .link-text {
-    display: none; /* Hide text */
-  }
-  .box-container {
-    max-width: 100%;
-    gap: 5px;
-    padding: 0 5px;
-    justify-content: center;
+    font-size: 12px; /* Reduce font size for body text */
+    bottom: 10px; /* Adjust position */
   }
 
-  .box {
-    height: 80px;
-    width: 45%; /* Full width for small mobile */
-    padding: 8px;
+  /* Ensure other elements maintain their styles but fit within the mobile screen */
+  .portfolio-box, .project, .contact-box, .quote-box {
+    width: 100%; /* Full width for smaller screens */
   }
 
-  .box i {
-    bottom: 50px;
-    font-size: 14px;
-  }
-
-  .box-heading {
-    font-size: 12px;
-    bottom: 10px;
-  }
-
-  .box-body {
-    font-size: 10px;
-    display: none;
-  }
-  .quote-box {
-    width: 90%; /* Reduce width to better fit smaller screens */
-    padding: 15px; /* Reduce padding */
-    text-align: justify; /* Change justification to left-align for mobile */
-    word-spacing: normal; /* Ensure word spacing is regular */
-    line-height: 1.5;
-    font-size: 10px;
-}
-}
-/* Large Mobile View: 769px to 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .social-links .link-text, 
-  .email-icon .link-text {
-    display: none; /* Hide text */
-  }
-  .box-container {
-    max-width: 100%;
-    gap: 15px;
-    padding: 0 15px;
-    justify-content: center;
-  }
-
-  .box {
-    height: 200px;
-    width: 40%; /* Two boxes side by side */
-    padding: 12px;
-  }
-
-  .box i {
-    bottom: 70px;
-    font-size: 20px;
-  }
-
-  .box-heading {
-    font-size: 16px;
-    bottom: 40px;
-  }
-
-  .box-body {
-    font-size: 14px;
-    display: inline;
+  .project img {
+    width: 100%; /* Ensure images fit within the screen */
+    height: auto; /* Maintain aspect ratio */
   }
 }
