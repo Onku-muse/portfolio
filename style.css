@@ -326,10 +326,17 @@ body {
   color: #ccc;
 }
 @media only screen and (max-width: 768px) {
-  /* For the entire webpage, set it to cover 70%-80% of the screen width and center it */
+  /* For the entire webpage, keep the body at 100% width */
   body {
     width: 100%;
-    margin: 0 auto; /* Center the body */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Content Wrapper - set this to 70% width and center it */
+  .content-wrapper {
+    width: 50%; /* Shrink content to 70% of screen */
+    margin: 0 auto; /* Center the content */
   }
 
   /* Social and Email Icons: only the icons, no text */
@@ -341,46 +348,84 @@ body {
     font-size: 18px; /* Reduce the icon size for mobile */
   }
 
-  /* Box section adjustments for mobile */
+  /* Floating banner */
+  .floating-banner {
+    height: 60px; /* Adjusted height for mobile */
+  }
+
+  .floating-banner img {
+    margin: 0 20px; /* Adjusted space between images */
+  }
+
+  /* Apply same width constraints to other sections */
+
+  .quote-box {
+    width: 100%; /* Make sure the quote box takes up full width of the content wrapper */
+    padding: 15px; /* Reduce padding */
+    text-align: left; /* Change justification to left-align for mobile */
+    word-spacing: 0.5; /* Ensure word spacing is regular */
+    line-height: 1.5; /* Slightly reduced line height for better fit */
+    font-size: 12px;
+  }
+
+  .project p {
+    font-size: 14px; /* Slightly smaller font for mobile */
+    text-align: justify; /* Maintain justified alignment */
+    word-spacing: normal;
+    line-height: 1.5; /* Adjust line height for mobile */
+  }
+
+  /* Font size adjustments */
+  h2, h3, p {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: justify;
+    word-spacing: 0.5px;
+  }
+
+  /* Images */
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Padding and margins */
+  .project-description, .section-title {
+    padding: 10px;
+    margin: 0;
+  }
+
   .box-container {
-    display: flex;
-    flex-wrap: wrap; /* Keep boxes side by side while wrapping if needed */
+    max-width: 100%;
     gap: 10px;
-    justify-content: space-between; /* Ensure space between boxes */
-    width: 100%; /* Ensure the boxes fit within the screen width */
+    justify-content: center;
   }
 
   .box {
-    width: 48%; /* Two boxes side by side, reduced size to fit the screen */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Reduce padding to fit mobile */
+    height: 75px;
+    width: 45%; /* Two boxes side by side */
   }
 
-  /* Icon inside the box - reduced size */
   .box i {
-    font-size: 18px; /* Reduce the icon size */
-    bottom: 80px; /* Adjust position based on reduced size */
+    top: 10px;
+    font-size: 15px;
+    left: 10px;
   }
 
-  /* Box Heading - reduced size */
   .box-heading {
-    font-size: 16px; /* Reduce font size for heading */
-    bottom: 50px; /* Adjust position */
+    font-size: 12px;
+    bottom: 1px;
   }
 
-  /* Box Body Text - reduced size */
   .box-body {
-    font-size: 12px; /* Reduce font size for body text */
-    bottom: 10px; /* Adjust position */
+    display: none;
+    font-size: 8px;
   }
 
-  /* Ensure other elements maintain their styles but fit within the mobile screen */
-  .portfolio-box, .project, .contact-box, .quote-box {
-    width: 100%; /* Full width for smaller screens */
-  }
-
-  .project img {
-    width: 100%; /* Ensure images fit within the screen */
-    height: auto; /* Maintain aspect ratio */
+  /* Center "Hi, I'm Onku_Muse" text */
+  .hello-text {
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center text block */
+    width: 90%; /* Adjust width to fit within margins */
   }
 }
